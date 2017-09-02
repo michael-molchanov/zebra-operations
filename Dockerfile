@@ -10,7 +10,7 @@ ADD config/ssh /root/.ssh/config
 RUN chmod 600 /root/.ssh/config
 
 # Install Bash.
-RUN apk add --update --no-cache bash && \
+RUN apk add --update --no-cache bash procps && \
   rm -rf /var/lib/apt/lists/*
 
 # Install Java.
